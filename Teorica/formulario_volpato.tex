@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{floatflt}
+\usepackage{epsfig}
+\usepackage{pstricks}
+\usepackage{subfigure}
+\usepackage[labelfont=bf, font=scriptsize]{caption}
+\usepackage[italian]{varioref}
+\usepackage[suftesi]{frontespizio}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepackage{comment}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\pgfplotsset{compat=1.16}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{phoenician}
+\usepackage{dsfont}
+
+\usepackage{subfigure}
+\usepackage[export]{adjustbox} % per l'allineamento delle immagini
+\usepackage{float}
+\usepackage{amssymb} % for the \lesssim symbol
+\usepackage{makecell}
+\usepackage{changepage}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+\DeclarePairedDelimiterX\braaket[3]{\langle}{\rangle}{#1\,\delimsize\vert\,#2\,\delimsize\vert\,\mathopen{}#3}
+\newcommand{\myrightarrow}[1]{\xrightarrow{\makebox[2em][c]{$\scriptstyle#1$}}}
+\newcommand{\convlegge}{\myrightarrow{\mathcal{L}}}
+\geometry{margin=4mm}
+\setlength{\columnseprule}{.5pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\hoffset}{-1in}
+\setlength{\parindent}{-10pt}
+
+\newcommand{\ind}{\mathrel{\perp\!\!\!\perp}}
+
+\begin{document}
+\begin{footnotesize}
+\begin{multicols*}{4}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Equazione di Schr\"{o}dinger}
+		\[i\hbar \frac{d}{dt} \ket{\psi } = H\ket{\psi }\]
+	\item \textbf{Operatore $P$}
+		\[P=-i\hbar \frac{d}{dx}\]
+		\begin{align*}
+			D_P = \{\psi \in L_2(a,b)\ ass.\ cont.\ \land \\ \psi'\in L_2(a,b)\}
+		\end{align*}
+		\[\left[X,P\right] = i\hbar \mathds{1}\]
+		\[\left[Q,P\right] = i\hbar \ \Rightarrow \ \left[Q,g(P)\right] = i\hbar g'(P)\]
+	\item \textbf{Relazioni di indeterminazione}
+		\[\left(\Delta A\right)_{a,\psi }\left(\Delta  B\right)_{b,\psi } \geq  \frac{1}{2} \left|\left<\left[A,B\right]\right>_{\psi }\right|\]
+		\[\left(\Delta X_i\right)_\psi \left(\Delta P_i\right)_\psi \geq  \frac{\hbar }{2}\]
+		\[\left(\Delta t\right)_\psi \left(\Delta H\right)_\psi \geq  \frac{\hbar }{2}\]
+		\[\left(\Delta t\right)_\psi := \inf_A \frac{\left(\Delta A\right)_\psi }{\left|\frac{d}{dt} \left< A\right>_\psi \right|}\]
+	\item \textbf{Base generalizzata del momento}
+		\[\braket*{\vec{x}}{\vec{p}} = \frac{e^{\frac{i}{\hbar }\vec{p}\cdot \vec{x}}}{\left(2\pi \hbar \right)^{\frac{3}{2}}}\]
+	\item \textbf{Equazione di continuità}
+		\[\vec{j}:= \frac{i\hbar }{2m} \left(\psi ^* \vec{\nabla }\psi  - \psi \vec{\nabla }\psi ^*\right)\]
+		\[\frac{\partial}{\partial t}\rho \left(\vec{x},t\right) + \vec{\nabla} \cdot \vec{j}\left(\vec{x},t\right)=0\]
+	\item \textbf{Operatore di evoluzione temporale}
+		\[U\left(t\right) = e^{-\frac{i}{\hbar } Ht}\]
+
+	\item \textbf{Teo. di Wigner (trasformazione di simmetria)}
+		\[
+			\left\{\begin{aligned}
+				&\psi ' = U\psi \\
+				&A' = UAU^\dag \\
+			\end{aligned}\right.
+		\]
+	\item \textbf{Visuale di Heisenberg}
+		\[
+			\left\{\begin{aligned}
+				&\ket*{\psi _h(t)} = U^\dag \ket*{\psi _s(t)} \\
+				&A_h(t) = U^\dag A_s(t) U\\
+			\end{aligned}\right.
+		\]
+		Nota: $U$ è l'operatore di evoluzione temporale.
+		\[
+			\left\{\begin{aligned}
+				&\frac{d}{dt}\ket*{\psi _h(t)} = 0 \\
+				&\frac{dA_h(t)}{dt} = -\frac{i}{\hbar }\left[A_h, H_h\right] + \left(\frac{\partial A}{\partial t}\right)_h\\
+			\end{aligned}\right.
+		\]
+	\item \textbf{Teo. di Ehrenfest}
+		\[
+			\left\{\begin{aligned}
+				&\frac{d}{dt}\left< Q\right>_\psi = \frac{1}{m} \left< P\right>_\psi \\
+				&\frac{d}{dt}\left< P\right>_\psi = -\left< V'(Q)\right>_\psi \\ 
+			\end{aligned}\right.
+		\]
+	\item \textbf{Matrici densità}
+		\[\rho _\psi := \ket*{\psi }\bra*{\psi }\]
+		\[\left< A\right>_\psi = tr\left(\rho A\right)\]
+		Definizione di operatore densità: $\rho $ tale che:
+		\[
+			\left\{\begin{aligned}
+				&\rho \ \ \  a.a.\\
+				&\rho \geq 0\\
+				&tr (\rho) =1\\
+			\end{aligned}\right.
+		\]
+		\[tr(\rho ^2)\leq 1\]
+	\item \textbf{Oscillatore armonico 1D}
+		\[H=\frac{P^2}{2m} + \frac{1}{2}m\omega ^2X^2\]
+		\[\widehat{X}:=\sqrt{\frac{m\omega }{\hbar }}X \hspace{25pt} \widehat{P}:=\frac{P}{\sqrt{m\omega \hbar }}\]
+		\[\left[\widehat{X}, \widehat{P}\right] = i\]
+		\[a := \frac{\widehat{X}+i\widehat{P}}{\sqrt{2}} \hspace{25pt} a^\dag = \frac{\widehat{X}-i\widehat{P}}{\sqrt{2}}\]
+		%\[\left[a,a^\dag\right] = 1\]
+		\[H = \hbar \omega \left(N+\frac{1}{2}\right)\]
+		\[N:=a^\dag a\hspace{20pt} aa^\dag - a^\dag a = 1 \]\[ aa^\dag=N+1\]
+		\[u_0(x) = \left( \frac{m\omega }{\pi \hbar }\right)^{\frac{1}{4}} e^{-\frac{m\omega }{\hbar }\frac{x^2}{2}}\]
+		\[\ket*{\nu } = \frac{\left(a^\dag\right)^\nu \ket*{0}}{\sqrt{\nu !}}\]
+		\[
+			\left\{\begin{aligned}
+				&a\ket*{\nu } = \sqrt{\nu}\,\ket*{\,\mathrm{\nu -1}} \\
+				& a^\dag\ket*{\nu } = \sqrt{\nu +1}\,\ket*{\nu +1}\\
+			\end{aligned}\right.
+		\]
+	\item \textbf{Generatore infinitesimo della simmetria}
+		\[Q:= \left.i\hbar \frac{d}{ds}U(s)\right|_{s=0}\]
+		\[U(s) = e^{-\frac{i}{\hbar }sQ}\]
+	\item \textbf{Generatori delle rotazioni}
+		\[\left[J_i, J_j\right] = i\hbar\, \varepsilon _{ijk} J_k\]
+\end{itemize}
+\end{multicols*}
+\end{footnotesize}
+\end{document}
