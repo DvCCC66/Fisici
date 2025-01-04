@@ -44,11 +44,13 @@
 \DeclarePairedDelimiterX\braaket[3]{\langle}{\rangle}{#1\,\delimsize\vert\,#2\,\delimsize\vert\,\mathopen{}#3}
 \newcommand{\myrightarrow}[1]{\xrightarrow{\makebox[2em][c]{$\scriptstyle#1$}}}
 \newcommand{\convlegge}{\myrightarrow{\mathcal{L}}}
+\newcommand{\re}{\mathfrak{Re}}
+\newcommand{\im}{\mathfrak{Im}}
 \geometry{margin=4mm}
 \setlength{\columnseprule}{.5pt}
 \setlength{\oddsidemargin}{0pt}
 \setlength{\hoffset}{-1in}
-\setlength{\parindent}{-10pt}
+%\setlength{\parindent}{-10pt}
 
 \newcommand{\ind}{\mathrel{\perp\!\!\!\perp}}
 
@@ -269,13 +271,13 @@
 
 		Ordine $\lambda ^q$:
 	\begin{align*}
-\left(H_0 - \mathcal{E}_0\right)\ket*{q,k} \\
+\left(H_0 - \mathcal{E}_0\right)\ket*{q,k} %\\
 + \left(\hat{W}-\mathcal{E}_1^k\right)\ket*{q-1,k}\\
 - \mathcal{E}_2^k\ket*{q-2,k} - \dots - \mathcal{E}_q^k\ket*{0,k} = 0
 	\end{align*}
 
 		Ordine $\lambda $:
-		\begin{align*}\sum_{s=1}^{d} \braaket*{\phi _r}{\hat{W}}{\phi _s}\braket*{\phi _s}{0,k} =\\= \mathcal{E}_1^k \braket*{\phi _r}{0,k}\end{align*}
+		\begin{align*}\sum_{s=1}^{d} \braaket*{\phi _r}{\hat{W}}{\phi _s}\braket*{\phi _s}{0,k} = \mathcal{E}_1^k \braket*{\phi _r}{0,k}\end{align*}
 		che è equazione ad autovalori/autovettori da risolvere $\forall \phi _r$
 
 
@@ -349,25 +351,46 @@
 		\begin{align*}\int_{\mathbb{R}^3}d^3x = \int_{0}^{\infty }dr \int_{0}^{\pi }d\theta \\ \int_{0}^{2\pi }d\phi \,\, r^2 \sin\theta \end{align*}
 
 	\item \textbf{Formule goniometriche}
-		\[\sin(\theta /2)^2 = (1-\cos\theta )/2\]
-		\[\cos(\theta /2)^2 = (1+\cos\theta )/2\]
+		\[\sin^2(\theta /2) = (1-\cos\theta )/2\]
+		\[\cos^2(\theta /2) = (1+\cos\theta )/2\]
+		\[\tan^2(\theta /2) = (1-\cos\theta )/(1+\cos\theta )\]
 		\[\tan(2\theta ) = 2\tan\theta /(1-\tan^2\theta )\]
 		\[\sin\alpha \cos\beta = [\sin(\alpha +\beta )+\sin(\alpha -\beta )]/2\]
 		\[\cos\alpha \cos\beta = [\cos(\alpha +\beta )+\cos(\alpha -\beta )]/2\]
 		\[\sin\alpha \sin\beta = [\cos(\alpha -\beta )+\cos(\alpha +\beta )]/2\]
+		Con $t=\tan(\theta  /2)$, con $\theta \neq (2k+1)\pi $
+		\[\sin\theta = \frac{2t}{1+t^2} \hspace{20pt}\cos\theta = \frac{1-t^2}{1+t^2}\]
+		\[\sin\alpha +\sin\beta  = 2\sin\left(\frac{\alpha +\beta }{2}\right)\cos\left(\frac{\alpha -\beta }{2}\right)\]
+		\[\cos\alpha +\cos\beta  = 2\cos\left(\frac{\alpha -\beta }{2}\right)\cos\left(\frac{\alpha +\beta }{2}\right)\]
 
 	\item \textbf{Integrali}
 		\[\int \sin^2 x \,dx = \frac{1}{2}(x-\sin x\cos x) + C\]
 		\[\int \cos^2 x \,dx = \frac{1}{2}(x+\sin x\cos x) + C\]
 		\[\int_{-\infty }^{+\infty } e^{-ax^2+bx}\,dx = \sqrt{\frac{\pi }{a}}\, \mathrm{exp}\left(\frac{b^2}{4a}\right)\]
+		\[\int_{0}^{+\infty }x^2e^{-x^2}\,dx = \frac{\sqrt{\pi }}{4}\]
+		\[\int \cos^3 x \,dx = \sin x - \frac{\sin^3 x}{3}\]
+		\[\int \sin^3 x \,dx =-\cos x + \frac{\cos^3 x}{3}\]
 
 	\item \textbf{Taylor}
 		\[\sin x = \sum_{n=0}^{+\infty }(-1)^n \frac{x^{2n+1}}{(2n+1)!}\]
 		\[\cos x = \sum_{n=0}^{+\infty }(-1)^n \frac{x^{2n}}{(2n)!}\]
+		\[\tan x = x + \frac{x^3}{3} + 2\frac{x^5}{15} + O(x^7)\]
 
 	\item \textbf{Eq. differenziale}
 		\[x''(t)-\omega ^2x(t) = 0:\]
 		\[x(t) = Ae^{\omega t} + Be^{-\omega t}\]
+
+		\[\dot{y}^t + a(t)y(t) = b(t)\]
+		\[y(t) = e^{-A(t)}\left[c+ \int b(t)e^{A(t)}\,dt\right]\]
+		con $A(t)$ una primitiva di $a(t)$.
+
+		\[\ddot{y} + a\dot{y} + by = 0\ \ \ a,b\in \mathbb{R}\]
+		In base a $\Delta $ di eq. di secondo grado associata:
+
+		\[y(t) = c_1e^{\lambda _1t} + c_2e^{\lambda _2t} \ \ \Delta >0\]
+		\[y(t) = c_1e^{\lambda t} + tc_2e^{\lambda t} \ \ \Delta =0\]
+		\[y(t) = c_1e^{\alpha  t}\cos(\beta t) + c_2e^{\alpha  t}\sin(\beta t) \ \ \Delta <0\]
+		Con $\alpha := \re(\lambda ),\ \beta :=\im(\lambda )$
 \end{itemize}
 \end{multicols*}
 \end{small}
