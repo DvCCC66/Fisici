@@ -61,11 +61,11 @@
 	\item \textbf{Equazione di Schr\"{o}dinger}
 		\[i\hbar \frac{d}{dt} \ket{\psi } = H\ket{\psi }\]
 	\item \textbf{Operatore $P$}
-		\[P=-i\hbar \frac{d}{dx}\]
+		\[P=-i\hbar \frac{d}{dx}%\]
+		\hspace{20pt} \left[X,P\right] = i\hbar \mathds{1}\]
 		\begin{align*}
-			D_P = \{\psi \in L_2(a,b)\ ass.\ cont.\ \land \\ \psi'\in L_2(a,b)\}
+			D_P = \{\psi \in L_2(a,b)\ ass.\ cont.  \land    \psi'\in L_2(a,b)\}
 		\end{align*}
-		\[\left[X,P\right] = i\hbar \mathds{1}\]
 		\[\left[Q,P\right] = i\hbar \ \Rightarrow \ \left[Q,g(P)\right] = i\hbar g'(P)\]
 	\item \textbf{Relazioni di indeterminazione}
 		\[\left(\Delta A\right)_{a,\psi }\left(\Delta  B\right)_{b,\psi } \geq  \frac{1}{2} \left|\left<\left[A,B\right]\right>_{\psi }\right|\]
@@ -98,8 +98,8 @@
 			0&0&1\\
 		\end{pmatrix}\]
 		\[\left[J_i, J_j\right] = i\hbar\, \varepsilon _{ijk} J_k\]
-		\[J_\pm := J_x \pm iJ_y\]
-		\[\left(J_\pm\right)^{-1} = J_\mp\]
+		\[J_\pm := J_x \pm iJ_y%\]
+		\hspace{20pt} \left(J_\pm\right)^{-1} = J_\mp\]
 		\[\left[J_z,J_\pm\right] = \pm\hbar J_\pm \hspace{20pt} \left[J^2,J_\pm\right] = 0\]
 		\[\left[J_+, J_-\right] = 2\hbar J_z\]
 		\[\frac{J_\pm \, \ket*{j,m}}{\hbar \sqrt{j(j+1) - m(m\pm 1)}} = \ket*{j,m\pm 1}\]
@@ -141,6 +141,10 @@
 				0&-1\\
 			\end{pmatrix}
 		\]
+		\[\vec{S}\cdot \hat{n} = \frac{\hbar }{2} \begin{pmatrix}
+			\cos\theta & e^{-i\phi }\sin\theta \\
+			e^{i\phi }\sin\theta & -\cos\theta \\
+		\end{pmatrix}\]
 		\[\sigma _i\sigma _j = i\varepsilon _{ijk}\sigma _k\]
 		\[\left[\sigma _i,\sigma _j\right] = 2i\varepsilon _{ijk}\sigma _k\]
 
@@ -204,8 +208,8 @@
 			\end{aligned}\right.
 		\]
 	\item \textbf{Matrici densità}
-		\[\rho _\psi := \ket*{\psi }\bra*{\psi }\]
-		\[\left< A\right>_\psi = tr\left(\rho A\right)\]
+		\[\rho _\psi := \ket*{\psi }\bra*{\psi }%\]
+		\hspace{20pt} \left< A\right>_\psi = tr\left(\rho A\right)\]
 		Definizione di operatore densità: $\rho $ tale che:
 		\[
 			\left\{\begin{aligned}
@@ -213,8 +217,8 @@
 				&\rho \geq 0\\
 				&tr (\rho) =1\\
 			\end{aligned}\right.
-		\]
-		\[tr(\rho ^2)\leq 1\]
+		%\]
+		\hspace{20pt} tr(\rho ^2)\leq 1\]
 	\item \textbf{Oscillatore armonico 1D}
 		\[H=\frac{P^2}{2m} + \frac{1}{2}m\omega ^2X^2\]
 		\[\widehat{X}:=\sqrt{\frac{m\omega }{\hbar }}X \hspace{25pt} \widehat{P}:=\frac{P}{\sqrt{m\omega \hbar }}\]
@@ -234,7 +238,7 @@
 	\item \textbf{Atomo H}
 		\[H_r = \frac{\vec{P_\mu }^2}{2\mu } - \frac{e^2}{r}\]
 		\[E=-\frac{E_I}{n^2}\]
-		\begin{align*}\Psi _{n,l,m} = \frac{N_{n,l}}{a_0^{\frac{3}{2}}} e^{-\frac{r}{a_0n}} \left(\frac{2r}{na_0}\right)^l\\ L\left(\frac{2r}{na_0}\right) Y_l^m(\theta ,\phi )\end{align*}
+		\begin{align*}\Psi _{n,l,m} = \frac{N_{n,l}}{a_0^{\frac{3}{2}}} e^{-\frac{r}{a_0n}} \left(\frac{2r}{na_0}\right)^l   L\left(\frac{2r}{na_0}\right) Y_l^m(\theta ,\phi )\end{align*}
 
 
 		\[e^2 := 2,3\cdot 10^{-28}\,\mathrm{J\cdot m}\]
@@ -348,7 +352,7 @@
 		\]
 		\[\vec{\nabla} f = \left(\frac{\partial f}{\partial r},\ \frac{1}{r}\frac{\partial f}{\partial \theta },\ \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi }\right)\]
 		\begin{align*}\vec{\nabla} \cdot \vec{F} = \frac{1}{r^2}\frac{\partial r^2F_r}{\partial r} + \frac{1}{r\sin\theta }\frac{\partial F_\theta \sin\theta }{\partial \theta }\\ + \frac{1}{r\sin\theta }\frac{\partial F_\phi }{\partial \phi }\end{align*}
-		\begin{align*}\int_{\mathbb{R}^3}d^3x = \int_{0}^{\infty }dr \int_{0}^{\pi }d\theta \\ \int_{0}^{2\pi }d\phi \,\, r^2 \sin\theta \end{align*}
+		\begin{align*}\int_{\mathbb{R}^3}d^3x = \int_{0}^{\infty }dr \int_{0}^{\pi }d\theta  \int_{0}^{2\pi }d\phi \,\, r^2 \sin\theta \end{align*}
 
 	\item \textbf{Formule goniometriche}
 		\[\sin^2(\theta /2) = (1-\cos\theta )/2\]
@@ -380,16 +384,16 @@
 		\[x''(t)-\omega ^2x(t) = 0:\]
 		\[x(t) = Ae^{\omega t} + Be^{-\omega t}\]
 
-		\[\dot{y}^t + a(t)y(t) = b(t)\]
+		\[\dot{y}^t + a(t)y(t) = b(t):\]
 		\[y(t) = e^{-A(t)}\left[c+ \int b(t)e^{A(t)}\,dt\right]\]
 		con $A(t)$ una primitiva di $a(t)$.
 
 		\[\ddot{y} + a\dot{y} + by = 0\ \ \ a,b\in \mathbb{R}\]
 		In base a $\Delta $ di eq. di secondo grado associata:
 
-		\[y(t) = c_1e^{\lambda _1t} + c_2e^{\lambda _2t} \ \ \Delta >0\]
-		\[y(t) = c_1e^{\lambda t} + tc_2e^{\lambda t} \ \ \Delta =0\]
-		\[y(t) = c_1e^{\alpha  t}\cos(\beta t) + c_2e^{\alpha  t}\sin(\beta t) \ \ \Delta <0\]
+		\[y(t) = c_1e^{\lambda _1t} + c_2e^{\lambda _2t} \ \ \ \  \Delta >0\]
+		\[y(t) = c_1e^{\lambda t} + tc_2e^{\lambda t} \ \ \ \  \Delta =0\]
+		\[y(t) = c_1e^{\alpha  t}\cos(\beta t) + c_2e^{\alpha  t}\sin(\beta t) \ \ \  \ \Delta <0\]
 		Con $\alpha := \re(\lambda ),\ \beta :=\im(\lambda )$
 \end{itemize}
 \end{multicols*}
