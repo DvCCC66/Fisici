@@ -114,7 +114,7 @@
 		\[L^2 \Psi _{l,m}(\vec{x}) = \hbar ^2 l(l+1) \Psi _{l,m}(\vec{x})\]
 		\[L_z \Psi _{l,m}(\vec{x}) = \hbar m \Psi _{l,m}(\vec{x})\]
 		\[L_z = -i\hbar \frac{\partial}{\partial \phi }\]
-		\begin{align*}Y_l^m(\theta ,\phi ) = \sqrt{\frac{2l+1}{4\pi }}\sqrt\frac{(l+|m|)!}{\left(l-|m|\right)!}\\\frac{1}{2^ll!}P_{l-m}(\theta ) e^{im\phi }\end{align*}
+		\begin{align*}Y_l^m(\theta ,\phi ) = \sqrt{\frac{2l+1}{4\pi }}\sqrt\frac{(l+|m|)!}{\left(l-|m|\right)!}\frac{1}{2^ll!}P_{l-m}(\theta ) e^{im\phi }\end{align*}
 		Con $P_{l,m}$ polinomi di Legendre di grado $l$; parità dell'armonica sferica uguale a quella di $l$:
 		\[Y_0^0 = \frac{1}{2}\sqrt{\frac{1}{\pi }}\]
 		\[Y_1^{-1} = \frac{1}{2}\sqrt{\frac{3}{2\pi }}e^{-i\phi }\sin\theta \]
@@ -355,7 +355,7 @@ Singoletto:
 			\end{aligned}\right.
 		\]
 		\[\vec{\nabla} f = \left(\frac{\partial f}{\partial r},\ \frac{1}{r}\frac{\partial f}{\partial \theta },\ \frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi }\right)\]
-		\begin{align*}\vec{\nabla} \cdot \vec{F} = \frac{1}{r^2}\frac{\partial r^2F_r}{\partial r} + \frac{1}{r\sin\theta }\frac{\partial F_\theta \sin\theta }{\partial \theta }\\ + \frac{1}{r\sin\theta }\frac{\partial F_\phi }{\partial \phi }\end{align*}
+		\begin{align*}\vec{\nabla} \cdot \vec{F} = \frac{1}{r^2}\frac{\partial r^2F_r}{\partial r} + \frac{1}{r\sin\theta }\frac{\partial F_\theta \sin\theta }{\partial \theta } + \frac{1}{r\sin\theta }\frac{\partial F_\phi }{\partial \phi }\end{align*}
 		\begin{align*}\int_{\mathbb{R}^3}d^3x = \int_{0}^{\infty }dr \int_{0}^{\pi }d\theta  \int_{0}^{2\pi }d\phi \,\, r^2 \sin\theta \end{align*}
 
 	\item \textbf{Formule goniometriche}
@@ -404,8 +404,8 @@ Singoletto:
 
 	\item \textbf{Coefficienti di Clebsch-Gordan}
 		\begin{figure}[H]
-			\includegraphics[width=.49\linewidth]{cg_12_12.png}
-			\includegraphics[width=.49\linewidth]{cg_1_12.png}
+			\includegraphics[width=.44\linewidth]{cg_12_12.png}
+			\includegraphics[width=.54\linewidth]{cg_1_12.png}
 			\includegraphics[width=1\linewidth]{cg_1_1.png}
 		\end{figure}
 \end{itemize}
