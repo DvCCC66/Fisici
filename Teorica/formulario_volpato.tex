@@ -55,7 +55,7 @@
 \newcommand{\ind}{\mathrel{\perp\!\!\!\perp}}
 
 \begin{document}
-\begin{small}
+\begin{footnotesize}
 \begin{multicols*}{3}
 \begin{itemize}[leftmargin=*]
 	\item \textbf{Equazione di Schr\"{o}dinger}
@@ -151,9 +151,9 @@
 		\[\sigma _i\sigma _j = i\varepsilon _{ijk}\sigma _k\]
 		\[\left[\sigma _i,\sigma _j\right] = 2i\varepsilon _{ijk}\sigma _k\]
 
-	\item \textbf{Spin di 2 particelle}
-		
-		Singoletto:
+
+		\begin{comment}
+Singoletto:
 		\[\ket*{0\ 0} = \frac{1}{\sqrt{2}} \left(\ket*{\updownarrows } - \ket*{\downuparrows }\right) \]
 		Tripletto:
 		\[
@@ -164,6 +164,7 @@
 			\end{aligned}\right.
 		\]
 
+		\end{comment}
 	\item \textbf{Simmetrie discrete}
 		\begin{itemize}
 			\item Parità $\mathbb{P}$:
@@ -398,7 +399,16 @@
 		\[y(t) = c_1e^{\lambda t} + tc_2e^{\lambda t} \ \ \ \  \Delta =0\]
 		\[y(t) = c_1e^{\alpha  t}\cos(\beta t) + c_2e^{\alpha  t}\sin(\beta t) \ \ \  \ \Delta <0\]
 		Con $\alpha := \re(\lambda ),\ \beta :=\im(\lambda )$
+
+
+
+	\item \textbf{Coefficienti di Clebsch-Gordan}
+		\begin{figure}[H]
+			\includegraphics[width=.49\linewidth]{cg_12_12.png}
+			\includegraphics[width=.49\linewidth]{cg_1_12.png}
+			\includegraphics[width=1\linewidth]{cg_1_1.png}
+		\end{figure}
 \end{itemize}
 \end{multicols*}
-\end{small}
+\end{footnotesize}
 \end{document}
